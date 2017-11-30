@@ -68,7 +68,7 @@
 				$myPhoto->resizeImage($maxWidth, $maxHeight);
 				$myPhoto->addWatermark($marginHor, $marginVer);
 				//$myPhoto->addTextWatermark($myPhoto->exifToImage);
-				$myPhoto->addTextWatermark("Heade mõtete veeb");
+				$myPhoto->addTextWatermark($_POST["watermark"]);
 				$notice .= $myPhoto->savePhoto($target_dir, $target_file);
 				//$myPhoto->saveOriginal(kataloog, failinimi);
 				$notice .= $myPhoto->createThumbnail($thumbs_dir, $thumb_file, $thumbsize, $thumbsize);
@@ -125,6 +125,8 @@
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload">
 		<br>
+		<label>Lisa enda vesimärk:</label>
+		<input name="watermark" type="text">
 		<br>
 		<input type="submit" value="Lae üles" name="submit">
 	</form>
