@@ -10,8 +10,8 @@
 	</head>
 	<body>
 		<header>
-			<div class="header-left"></div>
-			<div class="header-right"></div>
+			<div class="header-left">left</div>
+			<div class="header-right">right</div>
 		</header>
 
 	</body>
