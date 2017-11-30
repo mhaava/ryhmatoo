@@ -1,7 +1,6 @@
 <?php
 require ("functions.php");
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +20,7 @@ require ("functions.php");
 		<div class="container">
 			<div>
 				PHP tekitab pildid siia
+				<?php echo displayImages(); ?>
 			</div>
 		</div>
 		
