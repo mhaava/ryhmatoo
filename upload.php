@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //Algab foto laadimise osa
 	$target_dir = "uploads/";
 	$thumbs_dir = "thumbnails/";
@@ -83,4 +84,7 @@
 			$notice = "Palun valige kõigepealt pildifail!";
 		}//kas faili nimi on olemas lõppeb
 	}//kas üles laadida lõppeb
+=======
+//kommentaar
+>>>>>>> c4f1b99f0c1c610f5e2f10f97a9e212b562fdbea
 ?>
