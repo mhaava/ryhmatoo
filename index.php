@@ -6,10 +6,13 @@
 	<head>
 		<meta charset="utf-8" ></meta>
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-
+		<header>
+			<div class="header-left"></div>
+			<div class="header-right"></div>
+		</header>
 
 	</body>
 </html>
