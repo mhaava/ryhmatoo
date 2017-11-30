@@ -1,5 +1,7 @@
 <?php
 
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +12,7 @@
 	</head>
 	<body>
 		<header>
-			<div class="header-left">left</div>
+			<div class="header-left">mingi logo siia nt</div>
 			<div class="header-right"><a href="upload.php">Upload!</a></div>
 		</header>
 
