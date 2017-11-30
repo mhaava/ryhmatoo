@@ -9,12 +9,12 @@
 	function displayImages(){
 		$html = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-		$stmt = $mysqli->prepare("SELECT filename, thumbnail FROM pildid");
-		$stmt->bind_result($filename, $thumbnail);
+		$stmt = $mysqli->prepare("SELECT id, filename, thumbnail FROM pildid");
+		$stmt->bind_result($id, $filename, $thumbnail);
 		$stmt->execute();
 		//kõik pisipildid
 		while ($stmt->fetch()){
-			$html .= '<a href="#"><img src="thumbnails/'. $thumbnail .'"></a>';
+			$html .= '<a href="'.$id .'"><img src="thumbnails/'. $thumbnail .'"></a>';
 		}
 		
 		$stmt->close();
