@@ -11,8 +11,7 @@
 	<body>
 		<header>
 			<div class="header-left">left</div>
-			<div class="header-right">right</div>
-
+			<div class="header-right"><a href="upload.php">Upload!</a></div>
 		</header>
 
 	</body>
