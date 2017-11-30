@@ -1,4 +1,10 @@
 <?php
+	require("../../config.php");
+	require("photoupload.class.php");
+	$database = "if17_mihkel_2";
+	$photo_dir = "uploads/";
+	$thumb_dir = "thumbnails/";
+	$notice = "";
 //Algab foto laadimise osa
 	$target_dir = "uploads/";
 	$thumbs_dir = "thumbnails/";
@@ -75,7 +81,7 @@
 				} else {
 					$alt = "Foto";
 				}
-				addPhotoData($target_file, $thumb_file, $alt, $_POST["privacy"]);
+				addPhotoData($target_file, $thumb_file);
 				
 			}
 		
@@ -83,4 +89,44 @@
 			$notice = "Palun valige kõigepealt pildifail!";
 		}//kas faili nimi on olemas lõppeb
 	}//kas üles laadida lõppeb
+
+	function addPhotoData($filename, $thumbname){
+		//echo $GLOBALS["serverHost"];
+		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+		$stmt = $mysqli->prepare("INSERT INTO pildid (filename, thumbnail) VALUES (?, ?)");
+		echo $mysqli->error;
+		$stmt->bind_param("ss", $filename, $thumbname);
+		//$stmt->execute();
+		if ($stmt->execute()){
+			$GLOBALS["notice"] .= "Foto andmete lisamine andmebaasi õnnestus! ";
+		} else {
+			$GLOBALS["notice"] .= "Foto andmete lisamine andmebaasi ebaõnnestus! ";
+		}
+		$stmt->close();
+		$mysqli->close();
+	}
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+	RYHMATOO
+	</title>
+</head>
+<body>
+	<h1>RYHMATOO</h1>
+	<p>See veebileht on loodud õppetöö raames ning ei sisalda mingisugust tõsiseltvõetavat sisu!</p>
+	<hr>
+	<h2>Pildi üleslaadimine</h2>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+		<label>Valige pildifail:</label>
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<br>
+		<br>
+		<input type="submit" value="Lae üles" name="submit">
+	</form>
+	<span><?php echo $notice; ?></span>
+	<hr>
+</body>
+</html>
