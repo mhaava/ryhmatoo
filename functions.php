@@ -14,7 +14,7 @@
 		$stmt->execute();
 		//kõik pisipildid
 		while ($stmt->fetch()){
-			$html .= '<img src="thubnails/'. $thumbnail .'">';
+			$html .= '<img src="thumbnails/'. $thumbnail .'">';
 		}
 		
 		$stmt->close();
