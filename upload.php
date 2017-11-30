@@ -120,10 +120,7 @@
 	</title>
 </head>
 <body>
-	<h1>RYHMATOO</h1>
-	<p>See veebileht on loodud õppetöö raames ning ei sisalda mingisugust tõsiseltvõetavat sisu!</p>
-	<hr>
-	<h2>Pildi üleslaadimine</h2>
+	<h1>Pildi üleslaadimine</h1>
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload">
@@ -132,6 +129,5 @@
 		<input type="submit" value="Lae üles" name="submit">
 	</form>
 	<span><?php echo $notice; ?></span>
-	<hr>
 </body>
 </html>
