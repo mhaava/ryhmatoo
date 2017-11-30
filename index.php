@@ -19,7 +19,6 @@ require ("functions.php");
 		<br>
 		<div class="container">
 			<div>
-				PHP tekitab pildid siia
 				<?php echo displayImages(); ?>
 			</div>
 		</div>
