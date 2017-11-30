@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 //Algab foto laadimise osa
 	$target_dir = "uploads/";
 	$thumbs_dir = "thumbnails/";
@@ -22,8 +21,8 @@
 			$imageFileType = strtolower(pathinfo(basename($_FILES["fileToUpload"]["name"]))["extension"]);
 			$timeStamp = microtime(1) *10000;
 			//$target_file = $target_dir . pathinfo(basename($_FILES["fileToUpload"]["name"]))["filename"] ."_" .$timeStamp ."." .$imageFileType;
-			$target_file = "hmv_" .$timeStamp ."." .$imageFileType;
-			$thumb_file = "hmv_" .$timeStamp .".jpg";
+			$target_file = "rt_" .$timeStamp ."." .$imageFileType;
+			$thumb_file = "rt_" .$timeStamp .".jpg";
 		
 			$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 			if($check !== false) {
@@ -84,7 +83,4 @@
 			$notice = "Palun valige kõigepealt pildifail!";
 		}//kas faili nimi on olemas lõppeb
 	}//kas üles laadida lõppeb
-=======
-//kommentaar
->>>>>>> c4f1b99f0c1c610f5e2f10f97a9e212b562fdbea
 ?>
