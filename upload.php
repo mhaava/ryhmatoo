@@ -139,7 +139,7 @@
 		<input name="watermark" type="text">
 		<br>
 		<br>
-		<input type="submit" value="Lae üles" name="submit">
+		<input type="submit" style="background-image:url('graphics/upload.jpg'); height:111px; width: 454px; text-decoration:none;" value="" name="submit">
 	</form>
 	<span><?php echo $notice; ?></span>
 </body>
