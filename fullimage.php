@@ -25,7 +25,7 @@ $notice = "";
 		$stmt->close();
 		$mysqli->close();
 
-	function listIdeas(){
+	function listIdeas($id){
 		$notice = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		$stmt = $mysqli->prepare("SELECT id, comment, name, created FROM kommentaarid WHERE pic_id = ? ORDER BY id DESC");
@@ -40,16 +40,17 @@ $notice = "";
 		$mysqli->close();
 		return $notice;
 	}
+	$commentid = listIdeas($id);
 
 	if(isset($_POST["commentButton"])){
 		header("Location: ?id=" .$_POST["id"]);
-		exit();
 		if(isset($_POST["comment"]) and !empty($_POST["comment"])){
 			$comment = $_POST["comment"];
 			$commName = $_POST["commName"];
 			$id = $_POST["id"];
 			saveIdea($comment, $commName, $id);
 		}
+		exit();
 	}
 
 	function saveIdea($comment, $user, $id){
@@ -91,6 +92,6 @@ $notice = "";
 		<input name="comment" type="text">
 		<br>
 		<input name="commentButton" type="submit" value="OK">
-	<?php echo listIdeas(); ?>
+	<?php echo '<span style="color: white;">' .$commentid.'</span>'; ?>
 	</body>
 </html>
