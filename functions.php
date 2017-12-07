@@ -22,5 +22,13 @@
 		echo $html;
 	}
 	
+	function onImageClick($id){
+		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+		$stmt = $mysqli->prepare("UPDATE pildid SET clicks=clicks+1 WHERE id=?");
+		$stmt->bind_param("i", $id);
+		$stmt->execute();
+		$stmt->close();
+		$mysqli->close();
+	}
 	
 ?>

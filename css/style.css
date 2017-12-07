@@ -68,4 +68,5 @@ header {
 	width: 80%;
 	display: inline-flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }

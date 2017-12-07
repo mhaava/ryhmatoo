@@ -3,11 +3,13 @@ $id = ($_GET["id"]);
 
 
 	require("../../config.php");
+	require("functions.php");
 	$database = "if17_mihkel_2";
 	$photo_dir = "uploads/";
 	$thumb_dir = "thumbnails/";
 	
-	//muuta hiljem muutujad vastavaks
+		onImageClick($id);
+		
 		$html = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		$stmt = $mysqli->prepare("SELECT filename FROM pildid WHERE id=?");

@@ -92,10 +92,11 @@
 
 	function addPhotoData($filename, $thumbname){
 		//echo $GLOBALS["serverHost"];
+		$null=0;
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-		$stmt = $mysqli->prepare("INSERT INTO pildid (filename, thumbnail) VALUES (?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO pildid (filename, thumbnail, clicks) VALUES (?, ?, ?)");
 		echo $mysqli->error;
-		$stmt->bind_param("ss", $filename, $thumbname);
+		$stmt->bind_param("ssi", $filename, $thumbname, $null);
 		//$stmt->execute();
 		if ($stmt->execute()){
 			$GLOBALS["notice"] .= "Foto andmete lisamine andmebaasi õnnestus! ";
