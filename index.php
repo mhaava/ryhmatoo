@@ -12,7 +12,7 @@ require ("functions.php");
 	<body>
 		<header>
 			<div class="header-left"><img src="graphics/logo2.png" alt="Logo" height="42" ></div>
-			<div class="header-right"><a href="upload.php">Photo upload!</a></div>
+			<div class="header-right"><a href="upload.php"><img src="graphics/uploadlogo.png" alt="Photo Upload" height="32" ></a></div>
 		</header>
 		<br>
 		<br>
