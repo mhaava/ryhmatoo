@@ -64,9 +64,15 @@ header {
 	margin-top: 40px;
 	text-align: center;
 }
-.container div {
+.container .content {
 	width: 80%;
 	display: inline-flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	
+}
+.container .content div{
+	width: 100px;
+	display: block;
+	border: 2px solid lightgray;
 }
