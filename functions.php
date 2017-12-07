@@ -9,7 +9,7 @@
 	function displayImages(){
 		$html = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-		$stmt = $mysqli->prepare("SELECT id, filename, thumbnail, clicks FROM pildid");
+		$stmt = $mysqli->prepare("SELECT id, filename, thumbnail, clicks FROM pildid ORDER BY clicks DESC");
 		$stmt->bind_result($id, $filename, $thumbnail, $clickCount);
 		$stmt->execute();
 		//kõik pisipildid
