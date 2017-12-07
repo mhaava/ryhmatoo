@@ -12,13 +12,13 @@ require ("functions.php");
 	<body>
 		<header>
 			<div class="header-left">mingi logo siia nt</div>
-			<div class="header-right"><a href="upload.php">Upload!</a></div>
+			<div class="header-right"><a href="upload.php">Photo upload!</a></div>
 		</header>
 		<br>
 		<br>
 		<br>
 		<div class="container">
-			<div>
+			<div class=content>
 				<?php echo displayImages(); ?>
 			</div>
 		</div>
