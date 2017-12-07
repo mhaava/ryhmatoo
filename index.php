@@ -11,7 +11,7 @@ require ("functions.php");
 	</head>
 	<body>
 		<header>
-			<div class="header-left">mingi logo siia nt</div>
+			<div class="header-left"><img src="graphics/pealehelogo.png" alt="Logo" height="42" ></div>
 			<div class="header-right"><a href="upload.php">Photo upload!</a></div>
 		</header>
 		<br>
