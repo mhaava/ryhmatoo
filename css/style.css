@@ -80,3 +80,11 @@ header {
 	background-color: hsl(0, 0%, 25%);
 	color: white;
 }
+
+
+/*UPLOAD:PHP*/
+
+label, h1 {
+	color: white;
+	font-size: 30px;
+}
