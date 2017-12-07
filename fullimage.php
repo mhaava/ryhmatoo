@@ -75,8 +75,8 @@ $notice = "";
 	</head>
 	<body>
 		<header>
-			<div class="header-left">mingi logo siia nt</div>
-			<div class="header-right"><a href="upload.php">Upload!</a></div>
+			<div class="header-left"><img src="graphics/logo2.png" alt="Logo" height="42" ></div>
+			<div class="header-right"><a href="upload.php"><img src="graphics/uploadlogo.png" alt="Photo Upload" height="32" ></a></div>
 		</header>
 		<br>
 		<br>
