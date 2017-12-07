@@ -122,13 +122,22 @@
 	</title>
 </head>
 <body>
+		<header>
+			<div class="header-left"><img src="graphics/logo2.png" alt="Logo" height="42" ></div>
+			<div class="header-right"></div>
+		</header>
+		<br>
+		<br>
+		<br>
 	<h1>Pildi üleslaadimine</h1>
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload">
 		<br>
+		<br>
 		<label>Lisa enda vesimärk:</label>
 		<input name="watermark" type="text">
+		<br>
 		<br>
 		<input type="submit" value="Lae üles" name="submit">
 	</form>

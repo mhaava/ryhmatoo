@@ -86,10 +86,10 @@ $notice = "";
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<input name="id" type="hidden" value="<?php echo $_GET["id"]; ?>">
 		<label>Nimi: </label>
-		<input name="commName" type="text">
+		<input name="commName" type="text" required>
 		<br>
 		<label>Kommentaar: </label>
-		<input name="comment" type="text">
+		<input name="comment" type="text" required>
 		<br>
 		<input name="commentButton" type="submit" value="OK">
 	<?php echo '<span style="color: white;">' .$commentid.'</span>'; ?>
