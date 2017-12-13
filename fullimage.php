@@ -19,7 +19,7 @@ $notice = "";
 		$stmt->execute();
 		//kõik pisipildid
 		while ($stmt->fetch()){
-			$html .= '<img src="../../../andrusa/public_html/ryhmatoo/uploads/'. $filename .'">';
+			$html .= '<img src="uploads/'. $filename .'">';
 		}
 		
 		$stmt->close();
