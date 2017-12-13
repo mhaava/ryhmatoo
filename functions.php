@@ -31,4 +31,27 @@
 		$mysqli->close();
 	}
 	
+	function addLike($pic_id) {
+		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+		$checkIfLiked = $mysqli->prepare("SELECT * FROM likes WHERE ip_aadress = ? AND pic_id = ?");
+		$checkIfLiked->bind_param("si", $_SERVER['REMOTE_ADDR'], $pic_id);
+		$checkIfLiked->execute();
+		if ($checkIfLiked->fetch()) {
+			//selle IP-ga on seda pilti juba likeitud
+		} else {
+			$updatePildid = $mysqli->prepare("UPDATE pildid SET likes=likes+1 WHERE id=?");
+			$updatePildid->bind_param("i", $pic_id);
+			$updatePildid->execute();
+			$updatePildid->close();
+			$insertLike = $mysqli->prepare("INSERT INTO likes (pic_id, ip_aadress) VALUES (?, ?)");
+			$insertLike->bind_param("is", $pic_id, $_SERVER['REMOTE_ADDR']);
+			$insertLike->execute();
+			$insertLike->close();
+		}
+		$checkIfLiked->close();
+		
+		$mysqli->close();
+	}
+	
+	
 ?>
