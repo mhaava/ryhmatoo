@@ -6,8 +6,8 @@ $notice = "";
 	require("../../config.php");
 	require("functions.php");
 	$database = "if17_mihkel_2";
-	$photo_dir = "uploads/";
-	$thumb_dir = "thumbnails/";
+	$photo_dir = "../../../andrusa/public_html/ryhmatoo/uploads/";
+	$thumb_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
 	
 		onImageClick($id);
 		
@@ -19,7 +19,7 @@ $notice = "";
 		$stmt->execute();
 		//kõik pisipildid
 		while ($stmt->fetch()){
-			$html .= '<img src="uploads/'. $filename .'">';
+			$html .= '<img src="../../../andrusa/public_html/ryhmatoo/uploads/'. $filename .'">';
 		}
 		
 		$stmt->close();

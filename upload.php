@@ -6,8 +6,8 @@
 	$thumb_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
 	$notice = "";
 //Algab foto laadimise osa
-	$target_dir = "uploads/";
-	$thumbs_dir = "thumbnails/";
+	$target_dir = "../../../andrusa/public_html/ryhmatoo/uploads/";
+	$thumbs_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
 	$target_file = "";
 	$thumb_file = "";
 	$uploadOk = 1;
