@@ -57,7 +57,7 @@
 		
 		public function addWatermark($marginHor, $marginVer){
 			//lisame vesimärgi
-			$stamp = imagecreatefrompng("../../../andrusa/public_html/ryhmatoo/graphics/rt_logo.png");
+			$stamp = imagecreatefrompng("graphics/rt_logo.png");
 			$stampWidth = imagesx($stamp);
 			$stampHeight = imagesy($stamp);
 			$stampPosX = imagesx($this->myImage) - $stampWidth - $marginHor;
@@ -81,7 +81,7 @@
 			//imagecolorallocate - ilma läbipaistvuseta
 			//alpha 0 - 127
 			$textColor = imagecolorallocatealpha($this->myImage, 255, 255, 255, 50);
-			imagettftext($this->myImage, 20, 0, 10, 25, $textColor, "../../../andrusa/public_html/ryhmatoo/graphics/ARIAL.TTF", $text);
+			imagettftext($this->myImage, 20, 0, 10, 25, $textColor, "graphics/ARIAL.TTF", $text);
 		}
 		
 		public function savePhoto($directory, $fileName){
