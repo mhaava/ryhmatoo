@@ -17,4 +17,4 @@ Funktsionaalsus:
 Andmebaasi skeem:
 
 Kokkuvõte (mida õppisin juurde, mis ebaõnnestus, mis oli keeruline):
-Marii Helena Keerig - Õppisin
+
