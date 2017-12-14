@@ -1,6 +1,6 @@
 # PicUp
-
-
+Veebirakenduse pilt:
+https://drive.google.com/a/tlu.ee/file/d/1dBKYV5eW1oduFqE5WbqiA_f2PPpgAxJe/view?usp=sharing
 
 Mihkel Haava, Andrus Aun, Marii Helena Keerig
 
@@ -15,7 +15,14 @@ Funktsionaalsus:
 4. Näeb palju on pilte klikitud.
 
 Andmebaasi skeem:
+https://drive.google.com/a/tlu.ee/file/d/1ihQtrVJ0_4L9Ck-mCkRAkTYfo00BsBE7/view?usp=sharing
 
+SQL laused:
+("SELECT id, filename, thumbnail, clicks, likes FROM pildid ORDER BY clicks DESC");
+("UPDATE pildid SET clicks=clicks+1 WHERE id=?");
+("SELECT * FROM likes WHERE ip_address = ? AND pic_id = ?");
+("UPDATE pildid SET likes=likes+1 WHERE id=?");
+("INSERT INTO likes (pic_id, ip_address) VALUES (?, ?)");
 
 Kokkuvõte (mida õppisin juurde, mis ebaõnnestus, mis oli keeruline):
 
