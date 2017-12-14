@@ -28,3 +28,4 @@ Kokkuvõte (mida õppisin juurde, mis ebaõnnestus, mis oli keeruline):
 
 Mihkel- Oluliselt midagi juurde ei õppunud, pigem kinnistasin oma teadmisi. Keeruline oli likeide lisamine.
 Andrus - õppisin PHPd juurde, keeruline oli kommentaaride lisamine.
+Marii- Õppisin üldiselt juurde veebiprogrammeerimise kohta ning hakkasin asjadest paremini aru saama kui enne. Vahepeal ebaõnnestusid mõned asjad, kuid need said veidi aja pärast ilusti siiski tehtud. Keeruline oli koodi kirjutamine, kui täpselt ei mõistnud kõige tähendust.
