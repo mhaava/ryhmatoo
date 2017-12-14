@@ -2,12 +2,12 @@
 	require("../../config.php");
 	require("photoupload.class.php");
 	$database = "if17_mihkel_2";
-	$photo_dir = "../../../andrusa/public_html/ryhmatoo/uploads/";
-	$thumb_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
+	$photo_dir = "uploads/";
+	$thumb_dir = "thumbnails/";
 	$notice = "";
 //Algab foto laadimise osa
-	$target_dir = "../../../andrusa/public_html/ryhmatoo/uploads/";
-	$thumbs_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
+	$target_dir = "uploads/";
+	$thumbs_dir = "thumbnails/";
 	$target_file = "";
 	$thumb_file = "";
 	$uploadOk = 1;

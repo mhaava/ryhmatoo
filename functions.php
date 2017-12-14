@@ -2,8 +2,8 @@
 	//lisada kaustad
 	require("../../config.php");
 	$database = "if17_mihkel_2";
-	$photo_dir = "../../../andrusa/public_html/ryhmatoo/uploads/";
-	$thumb_dir = "../../../andrusa/public_html/ryhmatoo/thumbnails/";
+	$photo_dir = "uploads/";
+	$thumb_dir = "thumbnails/";
 	
 	//muuta hiljem muutujad vastavaks
 	function displayImages(){
@@ -14,7 +14,7 @@
 		$stmt->execute();
 		//kõik pisipildid
 		while ($stmt->fetch()){
-			$html .= '<div><a href="fullimage.php?id=' .$id .'"><img src="../../../andrusa/public_html/ryhmatoo/thumbnails/'. $thumbnail .'"></a><p>'. $clickCount. ' click(s)</p><p>'. $likeCount.' <a href="index.php?id='. $id.'">like</a>(s)</p></div>';
+			$html .= '<div><a href="fullimage.php?id=' .$id .'"><img src="thumbnails/'. $thumbnail .'"></a><p>'. $clickCount. ' click(s)</p><p>'. $likeCount.' <a href="index.php?id='. $id.'">like</a>(s)</p></div>';
 		}
 		
 		$stmt->close();
