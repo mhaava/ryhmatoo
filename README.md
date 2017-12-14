@@ -26,3 +26,4 @@ SQL laused:
 
 Kokkuvõte (mida õppisin juurde, mis ebaõnnestus, mis oli keeruline):
 
+Mihkel- Oluliselt midagi juurde ei õppunud, pigem kinnistasin oma teadmisi. Keeruline oli likeide lisamine.
